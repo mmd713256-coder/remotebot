@@ -1,0 +1,18 @@
+RemoteBot/
+├── .github/
+│   └── workflows/
+│       └── build-apk.yml          <-- Automated GitHub Cloud APK compiler
+├── app/
+│   ├── build.gradle               <-- App dependencies (compileSdk 34, minSdk 21)
+│   └── src/
+│       └── main/
+│           ├── AndroidManifest.xml <-- Android 14 foreground service & permissions
+│           ├── java/com/my/remotebot/
+│           │   ├── BotService.java        <-- Telegram polling service & hardware controls
+│           │   ├── MainActivity.java      <-- Launcher activity & permission manager
+│           │   └── AutostartReceiver.java  <-- Boot auto-restart receiver
+│           └── res/layout/
+│               └── activity_main.xml      <-- App UI layout
+├── build.gradle                   <-- Project level Gradle config
+├── settings.gradle                <-- Project settings
+└── README.md                      <-- Cloud build instructions
